@@ -1,0 +1,176 @@
+/* ---------------------------------------------------------------------------
+   Small stylesheet on top of Bootstrap 3.
+   Only the handful of rules the shop actually needs.
+   --------------------------------------------------------------------------- */
+
+body {
+    background: #f4f5f7;
+    color: #2f3337;
+}
+
+.page-content {
+    padding-top: 25px;
+    padding-bottom: 45px;
+    min-height: 70vh;
+}
+
+.shop-navbar .navbar-brand {
+    font-weight: 600;
+    letter-spacing: .3px;
+}
+
+/* The logout button sits inside a form but has to look like a menu link. */
+.navbar-link-button {
+    color: #9d9d9d;
+    padding: 0;
+    border: 0;
+    background: none;
+    text-decoration: none;
+}
+
+.navbar-link-button:hover,
+.navbar-link-button:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.admin-navbar .navbar-link-button {
+    color: #555;
+}
+
+.admin-navbar .navbar-link-button:hover {
+    color: #000;
+}
+
+.navbar-form {
+    margin: 0;
+    padding: 15px;
+}
+
+/* ------------------------------------------------------------ product cards */
+.product-card {
+    background: #fff;
+    border: 1px solid #e3e6ea;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    transition: box-shadow .15s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .09);
+}
+
+.product-card .product-thumb {
+    display: block;
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    background: #eceef0;
+}
+
+.product-card .product-body {
+    padding: 15px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card .product-title {
+    font-size: 16px;
+    margin: 0 0 6px;
+}
+
+.product-card .product-title a {
+    color: #2f3337;
+    text-decoration: none;
+}
+
+.product-card .product-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #d9480f;
+    margin-bottom: 10px;
+}
+
+.product-card .product-actions {
+    margin-top: auto;
+}
+
+/* Bootstrap 3 has no flex row: this keeps the cards in a grid the same height. */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-grid > [class*="col-"] {
+    display: flex;
+}
+
+.product-detail-image {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    background: #eceef0;
+    border: 1px solid #e3e6ea;
+    border-radius: 4px;
+}
+
+.cart-thumb {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.field-error {
+    color: #a94442;
+    font-size: 12px;
+    display: block;
+    margin-top: 4px;
+}
+
+.stat-card {
+    background: #fff;
+    border: 1px solid #e3e6ea;
+    border-radius: 4px;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+.stat-card .stat-value {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.stat-card .stat-label {
+    color: #6c757d;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+
+.shop-footer {
+    border-top: 1px solid #e3e6ea;
+    background: #fff;
+    padding: 20px 0;
+    color: #6c757d;
+    font-size: 13px;
+}
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.empty-state {
+    background: #fff;
+    border: 1px dashed #ced4da;
+    border-radius: 4px;
+    padding: 45px 20px;
+    text-align: center;
+    color: #6c757d;
+}

@@ -1,0 +1,14 @@
+# Uploaded files must NEVER be executed as code.
+# Even if somebody manages to store a .php file here, Apache will not run it.
+php_flag engine off
+
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+
+<FilesMatch "\.(?i:php|php3|php4|php5|php7|php8|phtml|phar|cgi|pl|py|sh)$">
+    Require all denied
+</FilesMatch>
+
+Options -Indexes -ExecCGI
+AddType text/plain .php .phtml .phar

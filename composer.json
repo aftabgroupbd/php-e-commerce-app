@@ -1,13 +1,24 @@
 {
-  "name": "",
-  "description": " ",
-  "keywords": [],
-  "type":"",
-  "licence":"",
-  "require":{},
-  "require-dev":{},
-  "autoload": {
-    "classmap": [],
-    "psr-4":{"App\\":"app//"}
-  }
+    "name": "assessment/mini-ecommerce",
+    "description": "A small e-commerce application written in plain PHP with a layered architecture.",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "app/Helpers/app.php",
+            "app/Helpers/view.php",
+            "app/Helpers/csrf.php",
+            "app/Helpers/auth.php",
+            "app/Helpers/response.php"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
 }
